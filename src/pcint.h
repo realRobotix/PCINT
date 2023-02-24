@@ -58,6 +58,7 @@ Nov.2014 large changes
 				#warning "uC PCINT REVERSE MAP IS NOT DEFINED"
 				//run the mkPCIntMap example to obtain a map for your board!
 			#endif
+			#define INT_MODE_TYPE uint8_t
 			#define digitalPinFromPCINTSlot(slot,bit) pgm_read_byte(pcintPinMap+(((slot)<<3)+(bit)))
 			#define pcintPinMapBank(slot) ((uint8_t*)((uint8_t*)pcintPinMap+((slot)<<3)))
 		#endif
